@@ -1,29 +1,32 @@
 body {
-  background-color: #fcd09f;
-  font-family: "Comic Sans MS", cursive, sans-serif;
+  background-color: #f5f5f5; /* Light gray background */
+  font-family: 'Arial', sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 #container {
   max-width: 400px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #ffeb3b; /* Yellow background for the toy box */
-  border: 5px solid #f57c00; /* Orange border for the toy box */
-  border-radius: 20px; /* Rounded corners */
+  background-color: #fff; /* White container background */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .counter-display {
-  background-color: #ffcc00;
+  background-color: #f0f0f0; /* Light gray background for the counter */
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 8px;
   margin: 10px 0;
 }
 
 #display {
-  font-size: 100px;
+  font-size: 36px;
   font-weight: bold;
-  color: #ff3333;
+  color: #333; /* Dark gray counter text */
 }
 
 .button-container {
@@ -35,22 +38,22 @@ body {
   font-size: 18px;
   padding: 10px 20px;
   margin: 5px;
-  background-color: #4caf50;
-  color: white;
+  background-color: #3498db; /* Blue button color */
+  color: #fff; /* White button text */
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 #btn:hover,
 #resetbtn:hover {
-  background-color: #45a049;
+  background-color: #2980b9; /* Darker blue on hover */
 }
 
 .message {
-  font-size: 75px;
-  color: #333;
+  font-size: 14px;
+  color: #666; /* Gray message text */
   margin-top: 5px;
 }
 
