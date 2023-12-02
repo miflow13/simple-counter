@@ -28,7 +28,7 @@ button {
     transform 0.1s;
   user-select: none;
   -webkit-user-select: none;
-  width: auto;
+  width: 200px;
   margin-left: 10px;
 }
 
@@ -55,7 +55,7 @@ button:disabled {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 200px;
+  padding-top: 200px;
 }
 
 .message {
@@ -64,4 +64,12 @@ button:disabled {
   justify-content: center;
   align-items: center;
   height: 200px;
+}
+
+#btn {
+  margin-right: 50px;
+}
+
+#resetbtn {
+  margin-left: 50px;
 }
