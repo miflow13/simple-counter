@@ -1,6 +1,6 @@
 window.onload = function () {
   // Declare count variable
-  let clickCount = 90;
+  let clickCount = 0;
 
   // Declare buttons from DOM
   let buttonContainer = document.getElementById("button-container");
