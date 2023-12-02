@@ -29,7 +29,7 @@ button {
   user-select: none;
   -webkit-user-select: none;
   width: 200px;
-  margin-left: 10px;
+  
 }
 
 button:focus-visible {
@@ -71,5 +71,5 @@ button:disabled {
 }
 
 #resetbtn {
-  margin-left: 50px;
+  margin-left: 0px;
 }

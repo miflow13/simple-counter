@@ -1,7 +1,7 @@
 // window.onLoad so script does not run before DOM fully loads
 window.onload = function () {
   // declare count variable
-  let count = 0;
+  let count = 90;
 
   // declaring buttons from DOM
   let btngroup = document.getElementById("button-container");
@@ -12,8 +12,10 @@ window.onload = function () {
   let disp = document.getElementById("display");
   let msg = document.getElementById("msg");
 
+  // delcare function to reset counter and win message
   const onReset = () => {
     count = 0;
+    btn.style.display = "block";
     disp.innerHTML = count;
     msg.innerHTML = "";
   };
@@ -33,9 +35,10 @@ window.onload = function () {
     }
     if (count === 100) {
       // once user clicks 100 times, buttons will be removed from dom and win message will be displayed
+      disp.style.fontSize = "100px";
+      msg.style.fontSize = "50px";
       msg.innerHTML = "You win! You have clicked 100 times!";
-      btngroup.remove();
-      resetbtn.remove();
+      btn.style.display = "none";
     }
   };
 
