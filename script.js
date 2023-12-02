@@ -1,50 +1,50 @@
-// window.onLoad so script does not run before DOM fully loads
 window.onload = function () {
-  // declare count variable
-  let count = 90;
+  // Declare count variable
+  let clickCount = 90;
 
-  // declaring buttons from DOM
-  let btngroup = document.getElementById("button-container");
-  let btn = document.getElementById("btn");
-  let resetbtn = document.getElementById("resetbtn");
+  // Declare buttons from DOM
+  let buttonContainer = document.getElementById("button-container");
+  let clickButton = document.getElementById("btn");
+  let resetButton = document.getElementById("resetbtn");
 
-  // declare count display from dom, where count will be displayed
-  let disp = document.getElementById("display");
-  let msg = document.getElementById("msg");
+  // Declare count display from DOM, where count will be displayed
+  let display = document.getElementById("display");
+  let message = document.getElementById("msg");
 
-  // delcare function to reset counter and win message
+  // Declare function to reset counter and win message
   const onReset = () => {
-    count = 0;
-    btn.style.display = "block";
-    disp.innerHTML = count;
-    msg.innerHTML = "";
+    clickCount = 0;
+    clickButton.style.display = "block";
+    display.innerHTML = clickCount;
+    message.innerHTML = "";
   };
 
   // Function to count clicks
   const onClick = () => {
-    count++;
-    disp.innerHTML = count;
-    if (count === 25) {
-      msg.innerHTML = "You have clicked 25 times!";
+    clickCount++;
+    display.innerHTML = clickCount;
+
+    // Check for specific click counts
+    if (clickCount === 25 || clickCount === 50 || clickCount === 75) {
+      message.innerHTML = `You have clicked ${clickCount} times!`;
     }
-    if (count === 50) {
-      msg.innerHTML = "You have clicked 50 times!";
+
+    if (clickCount === 100) {
+      // Once user clicks 100 times, buttons will be removed from DOM, and win message will be displayed
+      display.style.fontSize = "100px";
+      message.style.fontSize = "50px";
+      message.innerHTML = "You win! You have clicked 100 times!";
+      clickButton.style.display = "none";
     }
-    if (count === 75) {
-      msg.innerHTML = "You have clicked 75 times!";
-    }
-    if (count === 100) {
-      // once user clicks 100 times, buttons will be removed from dom and win message will be displayed
-      disp.style.fontSize = "100px";
-      msg.style.fontSize = "50px";
-      msg.innerHTML = "You win! You have clicked 100 times!";
-      btn.style.display = "none";
-    }
+
+    display.classList.add("animate");
+
+    setTimeout(() => {
+      display.classList.remove("animate");
+    }, 500); // Adjust the time to match the animation duration
   };
 
-  // function to reset counter and message
-
-  // event lister for reset button and clicker
-  btn.addEventListener("click", onClick);
-  resetbtn.addEventListener("click", onReset);
+  // Event listener for reset button and clicker
+  clickButton.addEventListener("click", onClick);
+  resetButton.addEventListener("click", onReset);
 };

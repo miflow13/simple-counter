@@ -29,7 +29,6 @@ button {
   user-select: none;
   -webkit-user-select: none;
   width: 200px;
-  
 }
 
 button:focus-visible {
@@ -72,4 +71,21 @@ button:disabled {
 
 #resetbtn {
   margin-left: 0px;
+}
+
+/* Define a simple animation for the display element */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the display element */
+#display.animate {
+  animation: fadeIn 0.5s ease-in-out;
 }
