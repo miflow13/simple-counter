@@ -1,9 +1,10 @@
 // window.onLoad so script does not run before DOM fully loads
 window.onload = function () {
+
   // declare count variable
   let count = 0;
 
-  // declare button from DOM
+  // declaring buttons from DOM
   let btn = document.getElementById("btn");
   let resetbtn = document.getElementById("resetbtn");
 
