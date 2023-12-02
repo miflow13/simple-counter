@@ -1,91 +1,61 @@
-.button-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-button {
-  background-color: #ffffff;
-  border: 1px solid #222222;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: #222222;
-  cursor: pointer;
-  display: inline-block;
-  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
-    "Helvetica Neue", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 20px;
-  margin: 0;
-  outline: none;
-  padding: 13px 23px;
-  position: relative;
+body {
+  background-color: #fcd09f;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
-  text-decoration: none;
-  touch-action: manipulation;
-  transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
-    transform 0.1s;
-  user-select: none;
-  -webkit-user-select: none;
-  width: 200px;
 }
 
-button:focus-visible {
-  box-shadow: #222222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 4px;
-  transition: box-shadow 0.2s;
-}
-
-button:active {
-  background-color: #f7f7f7;
-  border-color: #000000;
-  transform: scale(0.96);
-}
-
-button:disabled {
-  border-color: #dddddd;
-  color: #dddddd;
-  cursor: not-allowed;
-  opacity: 1;
+#container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffeb3b; /* Yellow background for the toy box */
+  border: 5px solid #f57c00; /* Orange border for the toy box */
+  border-radius: 20px; /* Rounded corners */
 }
 
 .counter-display {
+  background-color: #ffcc00;
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+#display {
   font-size: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 200px;
+  font-weight: bold;
+  color: #ff3333;
+}
+
+.button-container {
+  margin-top: 10px;
+}
+
+#btn,
+#resetbtn {
+  font-size: 18px;
+  padding: 10px 20px;
+  margin: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#btn:hover,
+#resetbtn:hover {
+  background-color: #45a049;
 }
 
 .message {
-  font-size: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
+  font-size: 75px;
+  color: #333;
+  margin-top: 5px;
 }
 
-#btn {
-  margin-right: 50px;
-}
-
-#resetbtn {
-  margin-left: 0px;
-}
-
-/* Define a simple animation for the display element */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Apply the animation to the display element */
-#display.animate {
-  animation: fadeIn 0.5s ease-in-out;
+.toy-image {
+  margin-top: 10px;
+  max-width: 100%;
+  height: auto;
 }

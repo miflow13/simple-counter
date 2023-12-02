@@ -4,21 +4,24 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Toy Button Clicker</title>
     <script src="script.js"></script>
     <audio id="milestone" src="/src/milestone.mp3"></audio>
     <audio id="click" src="/src/click.mp3" load="auto"></audio>
   </head>
   <body>
-    <div class="counter-display">
-      <p>
-        <span id="display">0</span>
-      </p>
-    </div>
-    </div>
-    <div class="button-container" id ="button-container">
-      <button id="btn">Click Here!</button>
-      <button id="resetbtn">Reset</button>
+    <div id="container">
+      <div class="counter-display">
+        <p>
+          <span id="display">0</span>
+        </p>
+      </div>
+
+      <div class="button-container" id="button-container">
+        <button id="btn">Click Here!</button>
+        <button id="resetbtn">Reset</button>
+        <button id="resetbtn" style="display: none">Start Over</button>
+      </div>
     </div>
     <div class="message">
       <span id="msg"></span>
